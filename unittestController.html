@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.4.css">
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
+    <script>
+        // model
+        let number;
+
+        // view
+        function updateView(){}
+        
+        QUnit.test('doble 5', function (assert) {
+            // arrange
+            number = 5;
+
+            // act
+            doubleNumber();
+
+            // assert
+            assert.equal(number, 10);
+        });
+    </script>
+</body>

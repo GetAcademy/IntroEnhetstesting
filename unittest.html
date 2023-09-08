@@ -9,7 +9,19 @@
     <script src="index.js"></script>
     <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
     <script>
-        QUnit.module('count', function () {
+        QUnit.module('describeNumber', function () {
+            QUnit.test('test 1', function (assert) {
+                describeNumber(2);
+            });
+            QUnit.test('test 2', function (assert) {
+                describeNumber(-3);
+            });
+            QUnit.test('test null', function (assert) {
+                describeNumber(null);
+            });
+        });
+
+        QUnit.module('translate', function () {
             QUnit.test('oi', function (assert) {
                 // arrange
                 let text = 'oi';
@@ -43,7 +55,28 @@
                 assert.equal(actualTranslation, 'toterorjoje');
             });
 
-            // bekymring - terje
+            QUnit.test('diverse tegn', function (assert) {
+                // arrange
+                let text = 'Det var en gang!';
+
+                // act
+                let actualTranslation = translate(text);
+
+                // assert
+                assert.equal(actualTranslation, 'Dodetot vovaror enon goganongog!');
+            });
+
+            
+            // QUnit.test('GET Academy', function (assert) {
+            //     // arrange
+            //     let text = 'GET Academy';
+
+            //     // act
+            //     let actualTranslation = translate(text);
+
+            //     // assert
+            //     assert.equal(actualTranslation, 'GOGETOT Acocadodemomy');
+            // });
         });
 
         QUnit.module('count', function () {
