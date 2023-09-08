@@ -9,42 +9,117 @@
     <script src="index.js"></script>
     <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
     <script>
-        QUnit.test('trallala', function (assert) {
-            // arrange
-            let text = 'trallala';
+        QUnit.module('count', function () {
+            QUnit.test('oi', function (assert) {
+                // arrange
+                let text = 'oi';
 
-            // act
-            let actualCount = countA(text);
+                // act
+                let actualTranslation = translate(text);
 
-            // assert
-            let expectedCount = 3;
-            assert.equal(actualCount, expectedCount);
+                // assert
+                assert.equal(actualTranslation, 'oi');
+            });
+
+            QUnit.test('ai', function (assert) {
+                // arrange
+                let text = 'ai';
+
+                // act
+                let actualTranslation = translate(text);
+
+                // assert
+                assert.equal(actualTranslation, 'ai');
+            });
+
+            QUnit.test('terje', function (assert) {
+                // arrange
+                let text = 'terje';
+
+                // act
+                let actualTranslation = translate(text);
+
+                // assert
+                assert.equal(actualTranslation, 'toterorjoje');
+            });
+
+            // bekymring - terje
         });
 
-        QUnit.test('Terje', function (assert) {
-            // arrange
-            let text = 'Terje';
+        QUnit.module('count', function () {
+            QUnit.test('trallala', function (assert) {
+                // arrange
+                let text = 'trallala';
 
-            // act
-            let actualCount = countA(text);
+                // act
+                let actualCount = countA(text);
 
-            // assert
-            let expectedCount = 0;
-            assert.equal(actualCount, expectedCount);
+                // assert
+                let expectedCount = 3;
+                assert.equal(actualCount, expectedCount);
+            });
+
+            QUnit.test('Terje', function (assert) {
+                // arrange
+                let text = 'Terje';
+
+                // act
+                let actualCount = countA(text);
+
+                // assert
+                let expectedCount = 0;
+                assert.equal(actualCount, expectedCount);
+            });
+
+            QUnit.test('tall', function (assert) {
+                // arrange
+                let text = 123;
+
+                // act
+                let actualCount = countA(text);
+
+                // assert
+                let expectedCount = 0;
+                assert.equal(actualCount, expectedCount);
+            });
+
+            QUnit.test('store og små bokstaver', function (assert) {
+                // arrange
+                let text = 'Aalborg er en artig by';
+
+                // act
+                let actualCount = countA(text);
+
+                // assert
+                let expectedCount = 3;
+                assert.equal(actualCount, expectedCount);
+            });
+
+            QUnit.test('null', function (assert) {
+                // arrange
+                let text = null;
+
+                // act
+                let actualCount = countA(text);
+
+                // assert
+                let expectedCount = 0;
+                assert.equal(actualCount, expectedCount);
+            });
+
+            QUnit.test('blanding av tall og tekst', function (assert) {
+                // arrange
+                let text = 'dfjhgfg2e65\'w42356#"%¤"#%¤';
+
+                // act
+                let actualCount = countA(text);
+
+                // assert
+                let expectedCount = 0;
+                assert.equal(actualCount, expectedCount);
+            });
         });
 
-        QUnit.test('tall', function (assert) {
-            // arrange
-            let text = 123;
 
-            // act
-            let actualCount = countA(text);
-
-            // assert
-            let expectedCount = 0;
-            assert.equal(actualCount, expectedCount);
-        });
-
-        // Stor/liten bokstav
     </script>
 </body>
