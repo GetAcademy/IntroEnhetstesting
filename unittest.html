@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.4.css">
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
+    <script>
+        QUnit.test('trallala', function (assert) {
+            // arrange
+            let text = 'trallala';
+
+            // act
+            let actualCount = countA(text);
+
+            // assert
+            let expectedCount = 3;
+            assert.equal(actualCount, expectedCount);
+        });
+
+        QUnit.test('Terje', function (assert) {
+            // arrange
+            let text = 'Terje';
+
+            // act
+            let actualCount = countA(text);
+
+            // assert
+            let expectedCount = 0;
+            assert.equal(actualCount, expectedCount);
+        });
+
+        QUnit.test('tall', function (assert) {
+            // arrange
+            let text = 123;
+
+            // act
+            let actualCount = countA(text);
+
+            // assert
+            let expectedCount = 0;
+            assert.equal(actualCount, expectedCount);
+        });
+
+        // Stor/liten bokstav
+    </script>
+</body>

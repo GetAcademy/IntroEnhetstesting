@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>Pause til 13:06</h1>
+    <div id="app"></div>
+    <script>
+        // model
+        let text = '';
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <input
+                    type="text"
+                    oninput="text=this.value"
+                    value="${text}"
+                    />
+                <button onclick="updateView()">Tell</button>
+                <div>
+                    Det er ${countA(text)} A-er
+                    i teksten "${text}".
+                </div>
+            `;
+            
+        }
+
+        // controller
+
+    </script>
+</body>
+
+</html>
